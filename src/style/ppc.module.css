@@ -1,0 +1,51 @@
+.frame {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtext {
+    font-size: 24px;
+    margin: 20px 0 20px;
+    /* border: 1px solid #fff; */
+}
+
+.description {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.list {
+    margin: 20px 0;
+    padding-left: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.highlight {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF6600; /* exact highlight color */
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .frame {
+        text-align: center;
+    }
+
+    .list {
+        padding-left: 0; /* remove left padding for center alignment */
+        list-style-position: inside; /* keep bullets aligned with text */
+    }
+}

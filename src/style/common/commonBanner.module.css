@@ -1,0 +1,174 @@
+.seoBanner {
+    text-align: center;
+    width: 100%;
+    background: url('/images/seo/seo-banner.png') no-repeat;
+    background-size: cover;
+    background-position: 80% 40%;
+    /* height: 100vh; */
+    padding: 14rem 0 80px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0F0F0F;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.seoBannerContent{
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.btnWrapper{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.seoBannerParagraph{
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto 0;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;    
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+.btnImg{
+    margin-left: 10px;
+    height: 17px;
+    width: 17px;
+}
+.seoBannerButtonLink{
+    color: #f0f8fd;
+    background: #F15D22;
+    border-radius: 40px;
+    box-shadow: 0 0 20px #fdf6f0;
+    padding: 10px 60px;
+    margin-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    line-height: 120%;
+}
+.seoBannerButtonLink2{
+    color: #f0f8fd;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    padding: 10px 60px;
+    margin-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.boxes{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    /* border: 1px solid red; */
+}
+
+.boxes div{
+    position: absolute;
+    height: 78px;
+    width: 78px;
+    background: url('/images/banner-sm-box.png');
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.boxes div:hover{
+    background-image: linear-gradient(to top right, rgba(182, 58, 58, 0.231), transparent);
+}
+
+.box1{   
+    top: 425px;
+    left: 145px;
+}
+
+.box2{
+    top: 500px;
+    left: 63px;
+    transform: rotate(180deg);
+}
+
+.box3{
+    top: 300px;
+    right: 65px;
+}
+
+
+@media (max-width: 768px) {
+    .seoBanner {
+        padding: 10rem 15px 50px 15px;
+    }
+    
+    .seoBannerContent {
+        padding: 0 15px;
+    }
+
+    .btnWrapper{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .seoBannerButton{
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .seoBannerParagraph {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        text-align: center;
+        font-weight: 400;
+        font-family: var(--font-family-gilory-regular);
+        line-height: 150%;
+        /* border: 1px solid red; */
+    }
+
+    .seoBannerButtonLink {
+        padding: 14px 30px;
+        font-size: 14px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .seoBannerButtonLink2 {
+        width: 100%;
+    }
+
+    .boxes{
+        display: none;
+    }
+
+    .btnImg {
+        width: 10px;
+        height: 10px;
+    }
+
+}

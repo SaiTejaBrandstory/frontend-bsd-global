@@ -1,0 +1,296 @@
+.frame{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.title{
+    /* font-size: 28px; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description{
+    font-size: 18px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 0px;
+    margin-top: 30px;
+}
+
+.optionList {
+    /* border: 1px solid yellow; */
+    display: flex;
+    /* margin-left: 75px; */
+    margin: auto;
+    /* margin-right: 75px; */
+    overflow: scroll;
+    flex-direction: row;
+    /* gap: 4px; */
+    /* width: calc(100% - 150px); */
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    scrollbar-gutter: stable both-edges;
+    /* padding: 8px 6px; */
+}
+
+.optionBtn {
+    height: 82px;
+    width: 275px;
+    position: relative;
+    background: transparent;
+    color: #bbb;
+    flex: 0 0 auto;
+    /* max-width: 90%; */
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: left;
+    white-space: normal;
+    font-weight: normal;
+    word-wrap: break-word;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-image: url('/images/selector-button-bg-transparent.png');  
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: Gilroy-Regular;
+    cursor: pointer;
+}
+
+.optionBtn:hover {
+    color: #913714;
+}
+
+.active {
+    /* background: linear-gradient(10deg, #211C4B, #F15D22); */
+    background-image: url('/images/selector-button-bg.png');  
+    color: #fff;
+    border: none; 
+    font-weight: bold;
+    /* padding-right: 44px; */
+}
+
+.active:hover {
+    color: white;
+    cursor: auto;
+}
+
+/* .active::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid white;
+} */
+
+.optionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.optionContent {
+    width: 100%;
+    max-width: 100%;
+    /* margin-top: 12px; */
+    min-height: 150px;
+    padding: 75px;
+    border: 1px solid #913714;
+    border-radius: 10px;
+    background-image: url('/images/common-option-selector-bg.png');
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+    transition: opacity 0.4s ease, transform 0.4s ease, flex 0.4s ease;
+    opacity: 1;
+    font-family: Gilroy-Regular;
+}
+
+.desktopContent {
+    display: block;
+}
+
+.mobileContent {
+    display: none;
+}
+
+.optionList::-webkit-scrollbar {
+    height: 10px;
+}
+.optionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+.optionList::-webkit-scrollbar-thumb {
+    background-color: #913714;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+@media (max-width: 767px) {
+    .frame {
+        padding: 40px 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .optionList {
+        width: 100%;
+        margin: 0;
+        overflow: visible;
+        flex-direction: column;
+        gap: 0;
+        max-width: 100%;
+    }
+
+    .optionWrapper {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .optionBtn {
+        font-size: 18px;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        min-height: 60px;
+        padding: 18px 24px;
+        text-align: center;
+        background: linear-gradient(135deg, #211C4B 0%, #F15D22 100%);
+        color: #fff;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        position: relative;
+        clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 100%, 0px 100%);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        background-image: none;
+        margin-bottom: 0;
+        flex: 0 0 100%;
+    }
+
+    .optionBtn:not(.active) {
+        background: linear-gradient(135deg, rgba(33, 28, 75, 0.6) 0%, rgba(241, 93, 34, 0.6) 100%);
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .optionBtn.active {
+        background: linear-gradient(135deg, #211C4B 0%, #F15D22 100%);
+        color: #fff;
+        opacity: 1;
+        font-weight: 700;
+    }
+
+    .optionBtn:hover:not(.active) {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    .desktopContent {
+        display: none;
+    }
+
+    .mobileContent {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+        border: 0.5px solid #F15D22;
+        border-radius: 0;
+        background: transparent;
+        background-image: none;
+        text-align: left;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.6;
+        margin-top: 0;
+        min-height: auto;
+    }
+
+    .optionContent {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+        border: 0.5px solid #F15D22;
+        border-radius: 0;
+        background: transparent;
+        background-image: none;
+        text-align: left;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.6;
+        margin-top: 0;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame {
+        padding: 30px 15px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .optionList {
+        gap: 0px;
+    }
+
+    .optionBtn {
+        font-size: 16px;
+        min-height: 55px;
+        padding: 16px 20px;
+    }
+
+    .optionContent {
+        padding: 20px 15px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}

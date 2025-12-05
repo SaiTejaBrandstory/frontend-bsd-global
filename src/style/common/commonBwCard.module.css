@@ -1,0 +1,103 @@
+.frame {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: #111; /* solid dark background */
+  color: #fff;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.subHeading {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.small {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  /* max-width: 500px; */
+  background: url('/images/SMM/white-card.webp');
+  background-size: 109%;
+  background-size: cover;
+  background-position: center;
+  color: #111;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid #a5a5a5;
+}
+
+.card h3{
+    font-size: 24px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 18px;
+    width: 80%;
+}
+
+.description{
+  font-size: 18px;
+}
+.description ul{
+  font-size: 18px;
+}
+.description ul li{
+  font-size: 18px;
+}
+
+.firstBox{
+    background-color: transparent;
+    background: url('/images/SMM/black-card.png');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: right top;
+
+    color: #fff;
+}
+.card:hover {
+  transform: translateY(-5px);
+  /* background: #333; */
+}
+
+
+
+.card p {
+  /* font-size: 0.95rem; */
+  line-height: 1.5;
+}
+
+.footer {
+  padding-top: 40px;
+  font-size: 18px;
+  color: #aaa;
+  max-width: 700px;
+  margin: 0 auto;
+}

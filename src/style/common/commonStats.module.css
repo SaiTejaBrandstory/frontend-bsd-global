@@ -1,0 +1,125 @@
+.CommonStatsSection {
+  background: url('/images/stats-bg.png'); /* dark bg */
+  padding: 60px 0px;
+  margin: 50px 0 0 0;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  border-radius: 12px;
+  background-size: cover;
+  width: var(--max-width);
+  margin: 0 auto;
+}
+
+.textBox {
+  flex: 1 1 55%;
+  padding-right: 0px;
+  max-width: 60%;
+}
+
+.textBox h2 {
+  margin-bottom: 15px;
+}
+
+.textBox h4 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: var(--font-family-bold);
+}
+
+.description p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.statsBox {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  background: #000000B2;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 30%;
+}
+
+.statsBox2{
+  max-width: 32%;
+  display: block;
+}
+
+.statsBox2 .statsBox{
+  max-width: 100%;
+}
+
+.statsTextBottom{
+  background-color: transparent !important;
+  padding-top: 10px; 
+  /* max-width: 100px; */
+} 
+
+.statItem {
+  padding: 20px 40px;
+  text-align: start;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(277.2deg, #F15D22 37.79%, #BA998C 93.22%) 1;
+}
+
+.statItem:last-child {
+  border-bottom: none;
+}
+
+.statItem h3 {
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #fff;
+  font-family: var(--font-family-gilory-regular);
+}
+
+.statItem p {
+  font-size: 18px;
+  color: #A1A1AA;
+  font-family: var(--font-family-gilory-regular);
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 762px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .textBox {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .statsBox {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .statItem {
+    flex: 1 1 100%;
+    border-right: none;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .statItem h3 {
+    font-size: 36px;
+  }
+
+  .statItem p {
+    font-size: 16px;
+  }
+}

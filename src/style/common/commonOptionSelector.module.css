@@ -1,0 +1,276 @@
+.frame{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 1rem;
+}
+
+.title{
+  font-size: 50px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description{
+  font-size: 24px;
+  text-align: center;
+  color: #FDF6F0;
+  margin: auto;
+  max-width: 982px;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+gap: 30px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.optionList {
+display: flex;
+flex-direction: column;
+gap: 12px;
+transition: flex 0.4s ease;
+}
+
+.optionWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionBtn {
+position: relative;
+background: transparent;
+border: 1px solid #913714;
+color: #bbb;
+padding: 20px 36px;
+text-align: left;
+font-size: 24px;
+border-radius: 0px;
+cursor: pointer;
+transition: all 0.4s ease;
+font-family: Gilroy-Bold;
+}
+
+.optionBtn:hover {
+color: #913714;
+}
+
+.active {
+background: linear-gradient(10deg, #211C4B, #F15D22);
+color: #fff;
+border: none; 
+padding: 20px 65px 20px 36px;
+}
+
+.active:hover {
+color: white;
+cursor: auto;
+}
+
+.active::after {
+content: "";
+position: absolute;
+right: 18px;
+top: 50%;
+transform: translateY(-50%);
+width: 0;
+height: 0;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-left: 16px solid white;
+}
+
+.optionContent {
+min-height: 150px;
+padding: 25px;
+border: 1px solid #913714;
+border-radius: 10px;
+background-image: url('/images/common-option-selector-bg.png');
+background-size: cover;
+background-position: center;
+text-align: left;
+font-size: 18px;
+color: #ccc;
+line-height: 1.6;
+transition: opacity 0.4s ease, transform 0.4s ease, flex 0.4s ease;
+opacity: 1;
+font-family: Gilroy-Regular;
+}
+
+.optionContent ul li {
+font-size: 18px;
+}
+
+.desktopContent {
+  display: block;
+}
+
+.mobileContent {
+  display: none;
+}
+
+.fadeOut {
+opacity: 0;
+transform: translateY(10px);
+}
+@media (max-width: 767px) {
+  .frame {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0;
+    gap: 0;
+    margin-top: 0;
+  }
+
+  .optionList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .optionBtn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+    padding: 20px 24px;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid rgba(253, 246, 240, 0.3);
+    margin-bottom: 0;
+    background: linear-gradient(135deg, rgba(33, 28, 75, 0.6) 0%, rgba(241, 93, 34, 0.6) 100%);
+    color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: Gilroy-Bold;
+  }
+
+  .optionBtn:not(.active) {
+    opacity: 0.8;
+  }
+
+  .optionWrapper {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .optionWrapper:last-child {
+    margin-bottom: 0;
+  }
+
+  .optionBtn.active {
+    background: linear-gradient(135deg, #211C4B 0%, #F15D22 100%);
+    opacity: 1;
+    /* border: 1px solid rgba(253, 246, 240, 0.5); */
+    margin-bottom: 0;
+  }
+
+  .optionBtn:hover:not(.active) {
+    opacity: 0.9;
+  }
+
+  .active {
+    padding-right: 24px;
+  }
+
+  .active::after {
+    display: none;
+  }
+
+  .desktopContent {
+    display: none;
+  }
+
+  .mobileContent {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 24px 20px;
+    border: 1px solid rgba(253, 246, 240, 0.3);
+    border-radius: 0px;
+    background: transparent;
+    background-image: none;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: auto;
+  }
+
+  .optionContent {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 24px 20px;
+    border: 1px solid #F15D22;
+    border-radius: 0px;
+    background: transparent;
+    background-image: none;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: auto;
+  }
+
+  .optionContent ul {
+    margin: 16px 0;
+    /* padding-left: 20px; */
+  }
+
+  .optionContent ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame {
+    padding: 2.5rem 15px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .optionBtn {
+    font-size: 16px;
+    padding: 18px 20px;
+    min-height: auto;
+  }
+
+  .mobileContent {
+    padding: 20px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .mobileContent ul li {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,138 @@
+.frame{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+    color: #fff;
+    text-align: left;
+}
+
+.heading{
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+
+.center{
+    text-align: center;
+}
+
+.contentWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.left{
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.left ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.left li{
+    margin-bottom: 15px;
+}
+
+.right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* SMMCaseBoxes */
+
+.caseWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.caseBox {
+  flex: 1;
+  padding: 30px;
+  border-radius: 12px;
+  background-size: 104%;
+  background-position: bottom;
+  color: #fff;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.case1 {
+  background-image: url('/images/SMM/case-bg-1.webp');
+}
+.case2 {
+  background-image: url('/images/SMM/case-bg-2.webp');
+}
+.case3 {
+  background-image: url('/images/SMM/case-bg-3.webp');
+}
+
+.imageId{
+    position: relative;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+.caseBox h3{
+    font-size: 30px;
+}
+
+.caseTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.caseDesc {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.caseBox ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.caseBox li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #bbb;
+  margin: 50px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .caseWrapper{
+        flex-direction: column;
+    }
+
+    .heading{
+      font-size: 32px;
+    }
+
+    .frame{
+      padding: 0 10px;
+    }
+}

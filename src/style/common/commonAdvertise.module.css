@@ -1,0 +1,139 @@
+.frame {
+  color: #fff;
+  padding: 90px 30px;
+  margin: 50px auto;
+  margin-bottom: 80px;
+  border-radius: 18px;
+  max-width: 1200px;
+  position: relative;
+  background: radial-gradient(circle at 90% 40%, #741541 0%, #000000 50%);
+  z-index: 1; /* Puts the main frame on top of the pseudo-element */
+}
+
+.frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 18px;
+  padding: 1px; /* This is the border thickness */
+  background: linear-gradient(to bottom right, #741515, #FFF);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.innerFrame{
+  max-width: 1009px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.frame p{
+  padding: 10px 0 20px;
+  text-align: left;
+}
+
+.heading {
+  text-align: left;
+  font-size: 50px;
+}
+
+.footertext{
+  font-weight: 900 !important;
+  text-align: left;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .frame{
+    margin: 20px;
+    padding: 80px 10px;
+  }
+
+  .innerFrame {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .heading{
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .frame p{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .footertext {
+    text-align: center;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .buttonContainer :global(.orange-btn),
+  .buttonContainer :global(.orange-btn-transparent) {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame {
+    padding: 60px 15px;
+    margin: 15px;
+  }
+
+  .innerFrame {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .frame p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footertext {
+    text-align: center;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .buttonContainer :global(.orange-btn),
+  .buttonContainer :global(.orange-btn-transparent) {
+    width: 90%;
+    max-width: 90%;
+    padding: 0.875rem 2rem;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,280 @@
+/* SEO Intelligence Report Page Styles */
+/* This file contains styles specific to the SEO Intelligence Report page */
+/* It ensures the page uses the original font sizes and spacing from the design */
+
+.seo-report-page,
+.seo-report-page * {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  /* Reset any global font size overrides */
+  --font-size: 16px !important;
+  --text-base: 1rem !important;
+  --text-sm: 0.875rem !important;
+  --text-xs: 0.75rem !important;
+  --text-lg: 1.125rem !important;
+  --text-xl: 1.25rem !important;
+  --text-2xl: 1.5rem !important;
+  --text-3xl: 1.875rem !important;
+  --text-4xl: 2.25rem !important;
+  --text-5xl: 3rem !important;
+  --text-6xl: 3.75rem !important;
+  --text-7xl: 4.5rem !important;
+}
+
+/* Reset font sizes to match original design */
+.seo-report-page h1 {
+  font-size: 2.25rem !important; /* text-4xl */
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+}
+
+.seo-report-page h2 {
+  font-size: 1.875rem !important; /* text-3xl */
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+}
+
+.seo-report-page h3 {
+  font-size: 1.5rem !important; /* text-2xl */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+.seo-report-page h4 {
+  font-size: 1.25rem !important; /* text-xl */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+.seo-report-page p {
+  font-size: 1rem !important; /* text-base */
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+
+.seo-report-page .text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25 !important;
+}
+
+.seo-report-page .text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1 !important;
+}
+
+.seo-report-page .text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75 !important;
+}
+
+.seo-report-page .text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75 !important;
+}
+
+.seo-report-page .text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 130% !important;
+}
+
+.seo-report-page .text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25 !important;
+}
+
+.seo-report-page .text-4xl {
+  font-size: 2.25rem !important;
+  line-height: 2.5 !important;
+}
+
+.seo-report-page .text-5xl {
+  font-size: 3rem !important;
+  line-height: 120% !important;
+}
+
+.seo-report-page .text-6xl {
+  font-size: 3.75rem !important;
+  line-height: 1 !important;
+}
+
+.seo-report-page .text-7xl {
+  font-size: 4.5rem !important;
+  line-height: 1 !important;
+}
+
+/* Ensure spacing matches original design */
+.seo-report-page .mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.seo-report-page .mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.seo-report-page .mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.seo-report-page .mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.seo-report-page .mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+.seo-report-page .mb-12 {
+  margin-bottom: 3rem !important;
+}
+
+.seo-report-page .mb-20 {
+  margin-bottom: 5rem !important;
+}
+
+.seo-report-page .p-3 {
+  padding: 0.75rem !important;
+}
+
+.seo-report-page .p-4 {
+  padding: 1rem !important;
+}
+
+.seo-report-page .p-6 {
+  padding: 1.5rem !important;
+}
+
+.seo-report-page .p-8 {
+  padding: 2rem !important;
+}
+
+.seo-report-page .gap-2 {
+  gap: 0.5rem !important;
+}
+
+.seo-report-page .gap-3 {
+  gap: 0.75rem !important;
+}
+
+.seo-report-page .gap-4 {
+  gap: 1rem !important;
+}
+
+.seo-report-page .gap-6 {
+  gap: 1.5rem !important;
+}
+
+/* Appendix / Data Sources Section Styles */
+.seo-report-page .appendix-heading {
+  font-size: 1rem !important; /* 16px */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+.seo-report-page .appendix-list {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.seo-report-page .appendix-list li {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+  padding-left: 1.25rem !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+
+.seo-report-page .appendix-list li::before {
+  content: "•" !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #1f2937 !important;
+  font-weight: bold !important;
+}
+
+/* Actionable Recommendations Section Styles */
+.seo-report-page .recommendations-list {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.seo-report-page .recommendations-list li {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+  padding-left: 1.25rem !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+
+.seo-report-page .recommendations-list li::before {
+  content: "•" !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #1f2937 !important;
+  font-weight: bold !important;
+}
+
+/* AEO & GEO Strategy Section Styles */
+.seo-report-page .aeo-geo-list {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.seo-report-page .aeo-geo-list li {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+  padding-left: 1.25rem !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+
+.seo-report-page .aeo-geo-list li::before {
+  content: "•" !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #1f2937 !important;
+  font-weight: bold !important;
+}
+
+/* Technical SEO & UX Benchmarks Section Styles */
+.seo-report-page .technical-seo-list {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.5rem !important;
+}
+
+.seo-report-page .technical-seo-list li {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  display: list-item !important;
+  margin-left: 0 !important;
+}
+
+/* Local SEO & Maps Optimization Section Styles */
+.seo-report-page .local-seo-list {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.5rem !important;
+}
+
+.seo-report-page .local-seo-list li {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  display: list-item !important;
+  margin-left: 0 !important;
+}
+

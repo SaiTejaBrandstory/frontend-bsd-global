@@ -1,0 +1,367 @@
+.frame{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.heading{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subHeading{
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centers last row */
+  margin-bottom: 2rem;
+  margin-top: 20px;
+}
+
+/* Swiper Wrapper - Mobile */
+.swiperWrapper {
+  display: none;
+}
+
+.swiperContainer {
+  width: 100%;
+}
+
+/* Make Swiper slides equal height */
+.swiperWrapper :global(.swiper-wrapper) {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiperWrapper :global(.swiper-slide) {
+  height: auto;
+  /* display: flex; */
+  align-items: stretch;
+}
+
+.cardMobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Make card content flexible for equal heights */
+.cardMobile .logo {
+  flex-shrink: 0;
+}
+
+.cardMobile h3 {
+  flex-shrink: 0;
+}
+
+.cardMobile p {
+  flex: 1;
+}
+
+/* .card {
+
+} */
+
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  padding: 25px 25px;
+  background: var(--bg);
+  background-size: cover;
+  background-position: bottom;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  flex: 0 1 370px;
+  background-color: #97938f24;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(253, 246, 240, 0) -70.28%, #97938F 106.57%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.logo{
+    width: 30%;
+    /* height: ; */
+    margin: 0 auto 15px;
+    object-fit: contain;
+}
+
+.footer p{
+    font-size: 18px;
+    color: white
+}
+
+.footer span{
+    color: #f15d22;
+}
+
+.card h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p{
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.footer{
+    color: #aaa;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .frame {
+        padding: 50px 20px;
+    }
+
+    .heading {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .subHeading {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 9px);
+        padding: 22px 20px;
+    }
+
+    .logo {
+        width: 28%;
+        margin-bottom: 12px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+}
+
+/* Swiper Pagination Dots */
+.swiperWrapper :global(.swiper-pagination) {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  bottom: auto;
+  display: none;
+  text-align: center;
+  width: auto;
+}
+
+.swiperWrapper :global(.swiper-pagination-bullet) {
+  width: 5px !important;
+  height: 5px !important;
+  min-width: 5px !important;
+  max-width: 5px !important;
+  background: #ffffff;
+  opacity: 1;
+  margin: 0 6px;
+  transition: width 0.4s ease, height 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.swiperWrapper :global(.swiper-pagination-bullet-active) {
+  background: #ffffff;
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px !important;
+  max-width: 10px !important;
+  border-radius: 50%;
+}
+
+@media (min-width: 1025px) {
+  /* Hide Swiper on desktop */
+  .swiperWrapper {
+    display: none !important;
+  }
+  
+  /* Show desktop grid */
+  .cards {
+    display: flex;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .frame {
+        padding: 30px 20px;
+    }
+
+    .heading {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .subHeading {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    /* Hide desktop grid on mobile */
+    .cards {
+        display: none;
+    }
+
+    /* Show Swiper on mobile */
+    .swiperWrapper {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 2rem;
+    }
+
+    .swiperWrapper :global(.swiper-pagination) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: auto;
+    }
+
+    .cardMobile {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 25%;
+        margin-bottom: 12px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .footer {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 20px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .frame {
+        padding: 2.5rem 15px;
+    }
+
+    .heading {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .subHeading {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    /* Hide desktop grid on small mobile */
+    .cards {
+        display: none;
+    }
+
+    /* Show Swiper on small mobile */
+    .swiperWrapper {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .swiperWrapper :global(.swiper-pagination) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        text-align: center;
+        width: auto;
+    }
+
+    .cardMobile {
+        padding: 16px;
+    }
+
+    .logo {
+        width: 16%;
+        margin-bottom: 10px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}

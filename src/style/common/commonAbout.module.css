@@ -1,0 +1,51 @@
+.container {
+    width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+.textBox{
+    display: flex;
+    text-align: center;
+    width: 1024px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+}
+.flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    text-align: start;
+    margin-top: 40px;
+}
+.points{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+.imageBox{
+    min-width: 40%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+
+    .textBox{
+        width: 100%;
+    }
+    
+    .flexbox{
+        width: 100%;
+    }
+    
+    .flexbox{
+        flex-direction: column;
+    }
+}

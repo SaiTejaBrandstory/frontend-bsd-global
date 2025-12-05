@@ -1,0 +1,296 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  color: #fff;
+  padding: 60px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 55%;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.title h2 {
+  margin: 0;
+}
+
+.highlited {
+  color: #F15D22;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.description {
+  font-size: 24px;
+}
+
+.accordionWrapper {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  width: 100%;
+}
+
+.accordionItem {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  background: url('/images/faq-black-bg.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px -2px rgba(255, 255, 255, 0.5);
+}
+
+.accordionItem:hover {
+  background: url('/images/faq-bg-lg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.accordionHeader {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.arrowContainer {
+  background-color: black;
+  height: 40px;
+  width: 42px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.arrow {
+  height: 60%;
+  width: 40%;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.accordionItem:hover .arrow {
+  filter: brightness(0) invert(1);
+}
+
+.flip {
+  transform: scaleY(-1);
+  filter: brightness(0) invert(1);
+}
+
+.accordionContent {
+  padding: 16px 20px;
+  color: #ccc;
+  /* border-top: 1px solid #333; */
+}
+
+.accordionHeader h4{
+  text-align: left;
+  margin: 0;
+  flex: 1;
+  word-wrap: break-word;
+}
+
+.accordionContent p {
+    font-size: 18px;
+}
+
+.btn{
+  border: 1px solid #F15D22;
+  color: #F15D22;
+  padding: 10px 50px;
+  width: max-content;
+  margin: 40px 0 0 0;
+  border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 50px 30px;
+    gap: 35px;
+  }
+  
+  .title h2 {
+    font-size: 28px;
+  }
+  
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 20px;
+    margin: 30px 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .text {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .title {
+    padding-bottom: 15px;
+  }
+  
+  .title h2 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 0 auto 15px;
+    text-align: center;
+  }
+  
+  .highlited {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .accordionWrapper {
+    width: 100%;
+    flex: 1 1 100%;
+    gap: 12px;
+  }
+  
+  .accordionHeader {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+  
+  .accordionHeader h4 {
+    font-size: 15px;
+    line-height: 1.4;
+    padding-right: 10px;
+  }
+  
+  .arrowContainer {
+    height: 36px;
+    width: 36px;
+    flex-shrink: 0;
+  }
+  
+  .accordionContent {
+    padding: 12px 16px;
+  }
+  
+  .accordionContent p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    margin: 30px 0 0 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .accordionItem:hover {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 25px 0;
+    gap: 25px;
+  }
+  
+  .text {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .title {
+    padding-bottom: 12px;
+  }
+  
+  .title h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+  
+  .highlited {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .accordionWrapper {
+    gap: 10px;
+  }
+  
+  .accordionHeader {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .accordionHeader h4 {
+    font-size: 14px;
+    padding-right: 8px;
+  }
+  
+  .arrowContainer {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .accordionContent {
+    padding: 10px 14px;
+  }
+  
+  .accordionContent p {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    font-size: 13px;
+    margin: 25px 0 0 0;
+  }
+}

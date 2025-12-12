@@ -83,9 +83,9 @@ export default async function ServicesSlugPage({ params }) {
   const sections = pageData.sections || []
   
   // Debug: Log sections to see what we're getting (remove in production)
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Sections data:', JSON.stringify(sections, null, 2))
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   console.log('Sections data:', JSON.stringify(sections, null, 2))
+  // }
 
   return <SectionRenderer sections={sections} />
 }

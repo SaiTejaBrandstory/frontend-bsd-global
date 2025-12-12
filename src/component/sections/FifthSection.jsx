@@ -3,9 +3,9 @@ import { CommonBigIndex } from "../pages/common/CommonBigIndex"
 // Helper function to get image URL from Strapi media object
 const getImageUrl = (image) => {
   if (!image) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('FifthSection - No image provided')
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log('FifthSection - No image provided')
+    // }
     return null
   }
   
@@ -32,9 +32,9 @@ const getImageUrl = (image) => {
   }
   
   if (!url) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('FifthSection - Could not extract URL from image:', image)
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log('FifthSection - Could not extract URL from image:', image)
+    // }
     return null
   }
   
@@ -48,9 +48,9 @@ const getImageUrl = (image) => {
   const cleanUrl = url.startsWith('/') ? url : `/${url}`
   const fullUrl = `${strapiUrl}${cleanUrl}`
   
-  if (process.env.NODE_ENV === 'development') {
-    console.log('FifthSection - Constructed image URL:', fullUrl)
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   console.log('FifthSection - Constructed image URL:', fullUrl)
+  // }
   
   return fullUrl
 }
@@ -81,15 +81,15 @@ export const FifthSection = ({
         const imageUrl = getImageUrl(card?.image)
         
         // Debug: Log full card data structure (remove in production)
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`FifthSection - Card ${index + 1} full data:`, {
-            caseStudyTitle: card?.caseStudyTitle,
-            image: card?.image,
-            imageUrl: imageUrl,
-            cardSubSections: card?.cardSubSections,
-            mappedCardSubSections: cardSubSections,
-          })
-        }
+        // if (process.env.NODE_ENV === 'development') {
+        //   console.log(`FifthSection - Card ${index + 1} full data:`, {
+        //     caseStudyTitle: card?.caseStudyTitle,
+        //     image: card?.image,
+        //     imageUrl: imageUrl,
+        //     cardSubSections: card?.cardSubSections,
+        //     mappedCardSubSections: cardSubSections,
+        //   })
+        // }
         
         return {
           title: card?.caseStudyTitle ?? `Case ${index + 1}`,
@@ -101,9 +101,9 @@ export const FifthSection = ({
     : []
 
   // Debug: Log final cases array
-  if (process.env.NODE_ENV === 'development') {
-    console.log('FifthSection - Final cases array:', cases)
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   console.log('FifthSection - Final cases array:', cases)
+  // }
   
   return (
     <>
